@@ -1,8 +1,8 @@
 import axios from "axios";
 // Set Token Headers
-axios.defaults.headers.post["Content-Type"] = ["application/json"];
-axios.defaults.headers.get["Content-Type"] = ["application/json"];
-axios.defaults.headers.put["Content-Type"] = "application/json";
+axios.defaults.headers.post["Content-Type"] = ["application/ld+json"];
+axios.defaults.headers.get["Content-Type"] = ["application/ld+json"];
+axios.defaults.headers.put["Content-Type"] = "application/ld+json";
 // const token = localStorage.getItem("token")
 // axios.defaults.headers.post["Authorization"] = `Bearer ${token}`;
 // axios.defaults.headers.put["Authorization"] = `Bearer ${token}`;

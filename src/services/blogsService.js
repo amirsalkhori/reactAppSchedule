@@ -9,7 +9,7 @@ export const blogsGet = (user) => {
 
 export const blogsPost = (user) => {
     return http.post(
-      `${config.baseUrl}/blogs`
+      `${config.baseUrl}/blogs`,user,{headers:{'Content-Type':'application/ld+json'}}
     );
   };
 
