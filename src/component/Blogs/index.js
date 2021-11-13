@@ -28,7 +28,7 @@ export default function Blogs() {
   useEffect(() => {
     async function fetchBlogs() {
       const {data} = await blogsGet()
-      setData(data);
+      setData(data['hydra:member']);
     }
     fetchBlogs()
   }, [])
