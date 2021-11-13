@@ -49,7 +49,7 @@ export default function LayoutTextFields() {
           }}
           variant="outlined"
           value={title}
-          onChange={(value) => setTitle(value)}
+          onChange={(e) => setTitle(e.target.value)}
         />
          <TextField
           id="outlined-multiline-static"
@@ -61,7 +61,7 @@ export default function LayoutTextFields() {
           placeholder="Placeholder"
           variant="outlined"
           value={body}
-          onChange={(value) => setBody(value)}
+          onChange={(e) => setBody(e.target.value)}
         />
         <DatePick style={{ margin: 8 }} fullWidth value={schedule} />
         <Button style={{ margin: 8 }} variant="contained" color="primary" onClick={handlePost}>
