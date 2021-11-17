@@ -63,7 +63,7 @@ export default function LayoutTextFields() {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         />
-        <DatePick style={{ margin: 8 }} fullWidth value={schedule} />
+        <DatePick style={{ margin: 8 }} fullWidth value={schedule} setValue={setSchedule} />
         <Button style={{ margin: 8 }} variant="contained" color="primary" onClick={handlePost}>
             Primary
         </Button>
