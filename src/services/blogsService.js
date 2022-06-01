@@ -3,13 +3,13 @@ import config from "./config.json";
 
 export const blogsGet = (user) => {
   return http.get(
-    `${config.baseUrl}/blogs`
+    `${config.baseUrl}api/report`
   );
 };
 
 export const blogsPost = (user) => {
     return http.post(
-      `${config.baseUrl}/blogs`,user,{headers:{'Content-Type':'application/ld+json'}}
+      `${config.baseUrl}api/send_sms`,user,{headers:{'Content-Type':'application/json'}}
     );
   };
 

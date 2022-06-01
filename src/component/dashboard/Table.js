@@ -24,7 +24,7 @@ export default function BasicTable() {
   useEffect(() => {
     async function fetchBlogs() {
       const {data} = await blogsGet()
-      setData(data['hydra:member']);
+      setData(data.allSms);
     }
     fetchBlogs()
   }, [])
@@ -39,12 +39,12 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((row) => (
+          {data?.map((row) => (
             <TableRow key={row.id}>
               <TableCell component="th" scope="row">
-                {row.title}
+                {row.phoneNumber}
               </TableCell>
-              <TableCell align="right">{row.body}</TableCell>
+              <TableCell align="right">{row.message}</TableCell>
             </TableRow>
           ))}
         </TableBody>
